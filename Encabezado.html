@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Color de Fondo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #061137;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #parrafo {
+            background-color: #f0f0f0;
+            padding: 80px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        #cambiarColorBtn {
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #061137;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1> Ejercicios </h1>
+        </div>
+    </header>
+
+    <p id="parrafo">Haz clic en el botón para cambiar el color de fondo.</p>
+
+    <button id="cambiarColorBtn" onclick="cambiarColor()">Cambiar Color</button>
+
+    <script>
+        function cambiarColor() {
+            var parrafo = document.getElementById('parrafo');
+            parrafo.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+
+</body>
+
+</html>
