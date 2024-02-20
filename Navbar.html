@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación Responsiva</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #061137;
+            overflow: hidden;
+            text-align: center;
+            /* Centrar los elementos */
+        }
+
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a {
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#" onclick="cambiarTexto('Inicio')">Inicio</a>
+        <a href="#" onclick="cambiarTexto('Servicios')">Servicios</a>
+        <a href="#" onclick="cambiarTexto('Contacto')">Contacto</a>
+    </div>
+
+    <div style="padding: 16px">
+        <h2 id="textoBienvenida">Bienvenido</h2>
+    </div>
+
+    <script>
+        function cambiarTexto(nuevoTexto) {
+            document.getElementById('textoBienvenida').innerText = nuevoTexto;
+        }
+    </script>
+
+</body>
+
+</html>
