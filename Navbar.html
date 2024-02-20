@@ -15,7 +15,6 @@
             background-color: #061137;
             overflow: hidden;
             text-align: center;
-            /* Centrar los elementos */
         }
 
         .navbar a {
@@ -43,18 +42,18 @@
 <body>
 
     <div class="navbar">
-        <a href="#" onclick="cambiarTexto('Inicio')">Inicio</a>
-        <a href="#" onclick="cambiarTexto('Servicios')">Servicios</a>
-        <a href="#" onclick="cambiarTexto('Contacto')">Contacto</a>
+        <a href="#" onclick="changeText('Inicio')">Inicio</a>
+        <a href="#" onclick="changeText('Servicios')">Servicios</a>
+        <a href="#" onclick="changeText('Contacto')">Contacto</a>
     </div>
 
     <div style="padding: 16px">
-        <h2 id="textoBienvenida">Bienvenido</h2>
+        <h2 id="text">Bienvenido</h2>
     </div>
 
     <script>
-        function cambiarTexto(nuevoTexto) {
-            document.getElementById('textoBienvenida').innerText = nuevoTexto;
+        function changeText(newText) {
+            document.getElementById('text').innerText = newText;
         }
     </script>
 
